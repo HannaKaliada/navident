@@ -1,0 +1,134 @@
+.services {
+  position: relative;
+
+  padding: 14.8rem 0 10rem;
+  #services {
+    position: absolute;
+    top: -83px;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      max-width: 34rem;
+
+      font-weight: 600;
+      font-size: 4rem;
+      line-height: 6.5rem;
+      text-align: right;
+      color: #001f23;
+      span {
+        color: #db162f;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    width: 60%;
+    .service {
+      width: 33.33333%;
+      padding: 2.5rem 2.5rem 3.2rem;
+
+      color: #001f23;
+
+      background-color: #ffffff;
+      border-right: 1px solid #dddce5;
+      cursor: pointer;
+      svg {
+        min-height: 55px;
+      }
+      h4 {
+        margin: 3.4rem 0 1.2rem;
+
+        font-weight: 600;
+        font-size: 1.7rem;
+        line-height: 2.2rem;
+        letter-spacing: 0.01em;
+      }
+    }
+    .service:hover {
+      background-color: #fbfbfb;
+    }
+    .service.active {
+      color: #ffffff;
+
+      background-color: #db162f;
+
+      pointer-events: none;
+      svg path {
+        fill: #ffffff;
+      }
+    }
+    .service:first-child.active {
+      svg path:last-child {
+        fill: #db162f;
+      }
+    }
+    .service:last-child {
+      border-right: 0;
+    }
+  }
+  &__prices {
+    margin-top: 7.4rem;
+
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.04));
+    .service {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem 0;
+
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      color: #292934;
+
+      cursor: pointer;
+      &__name {
+        width: 80%;
+        padding-left: 3.2rem;
+      }
+      &__price {
+        width: 20%;
+        padding-left: 3.2rem;
+      }
+    }
+    .service:nth-child(2n + 1) {
+      background-color: #ffffff;
+    }
+    .service:hover {
+      color: #ffffff;
+
+      background-color: #db162f;
+    }
+  }
+}
+
+@media (max-width: 865px) {
+  .services {
+    padding: 9.8rem 0 10rem;
+    &__info {
+      h2 {
+        display: none;
+      }
+    }
+    &__list {
+      width: 100%;
+      .service {
+        text-align: center;
+      }
+    }
+    &__prices {
+      .service {
+        font-size: 1.3rem;
+        &__name {
+          width: 70%;
+        }
+        &__price {
+          width: 30%;
+          padding-right: 2rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@import "./preloader.scss";
+@import "./main.scss";
+@import "./header.scss";
+@import "./footer.scss";
+@import "./mixins.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-weight: 400;
+  font-family: "Golos", sans-serif;
+}
+
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  line-height: 10px;
+
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 135px;
+}
+
+.hidden {
+  z-index: -1 !important;
+
+  opacity: 0;
+}
+
+a {
+  color: #db162f;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.appointment-btn {
+  display: inline-block;
+  padding: 18px 28px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+
+  background: #db162f;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+
+  transition: 0.4s;
+}
+
+.appointment-btn_mobile {
+  display: none;
+}
+
+.appointment-btn:hover {
+  background: #ba051c;
+}
+
+@media (max-width: 1115px) and (min-width: 551px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+
+@include tablet() {
+  html {
+    font-size: 8px;
+    line-height: 8px;
+  }
+}
+
+@include tablet-and-mobile() {
+  .appointment-btn_mobile {
+    display: inline-block;
+  }
+  .appointment-btn_desktop {
+    display: none;
+  }
+}
+
+@media(max-width: 550px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@include mobile() {
+  html {
+    font-size: 7px;
+    line-height: 7px;
+  }
+  .container {
+    padding: 0 25px;
+  }
+}

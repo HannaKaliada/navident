@@ -1,0 +1,16 @@
+&__nav {
+  display: flex;
+  li {
+    margin-right: 4.1rem;
+    a {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      color: #859097;
+      letter-spacing: 0.01em;
+    }
+    a.active,
+    a:hover {
+      color: #db162f;
+    }
+  }
+}

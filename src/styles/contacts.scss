@@ -1,0 +1,136 @@
+@import "./mixins.scss";
+
+.contacts {
+  position: relative;
+
+  display: flex;
+
+  background-color: #ffffff;
+  #contacts {
+    position: absolute;
+    top: -83px;
+  }
+  .map {
+    width: 50%;
+  }
+  &__info {
+    width: 50%;
+    padding: 9.7rem 16rem 11rem 16rem;
+
+    color: #001f23;
+    h3 {
+      margin-bottom: 4.5rem;
+
+      font-size: 2.2rem;
+      line-height: 3.6rem;
+      span {
+        color: #db162f;
+      }
+    }
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2.5rem;
+      p {
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+      }
+      span {
+        font-size: 1.6rem;
+      }
+      a {
+        font-size: 2.2rem;
+        line-height: 2rem;
+      }
+      img {
+        margin-right: 2.4rem;
+      }
+    }
+  }
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: auto;
+    height: 70%;
+
+    transform: translate(-70%, -50%);
+  }
+}
+
+@media (max-width: 1240px) {
+  .contacts {
+    &__info {
+      padding: 5.7rem 4rem 5rem 11rem;
+      li {
+        p {
+          font-size: 1.4rem;
+        }
+        span {
+          font-size: 1.2rem;
+        }
+        a {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    &__image {
+      height: 60%;
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .contacts {
+    flex-direction: column-reverse;
+    .map {
+      width: 100%;
+      height: 300px;
+    }
+    &__info {
+      width: 75%;
+    }
+    &__image {
+      top: unset;
+      right: 6rem;
+      bottom: 3rem;
+      left: unset;
+
+      width: 20%;
+      height: auto;
+
+      transform: none;
+    }
+  }
+}
+
+@media(max-width: 500px) {
+  .contacts {
+    &__info {
+      width: 80%;
+    }
+  }
+}
+
+@media(max-width: 380px) {
+  .contacts {
+    &__info {
+      width: 100%;
+      padding-left: 25px;
+    }
+    &__image {
+      width: 25%;
+    }
+  }
+}
+
+// @include mobile() {
+//     .contacts {
+//         flex-direction: column;
+//         &__info {
+//             width: 100%;
+//             padding: 3rem;
+//         }
+//     }
+// }

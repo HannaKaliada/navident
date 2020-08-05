@@ -1,0 +1,94 @@
+@import "./advantages.scss";
+@import "./doctors.scss";
+@import "./contacts.scss";
+@import "./mixins.scss";
+@import "./gallery.scss";
+@import "./services.scss";
+@import "./callToAction.scss";
+
+.main {
+  margin-top: 8.4rem;
+
+  background-color: #f8f8f6;
+  .main-screen {
+    padding: 8.4vw 0 9.5vw;
+
+    background-image: url("../assets/images/06.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+    &__inner {
+      position: relative;
+      &__text {
+        width: 50%;
+        h1 {
+          max-width: 620px;
+          margin-bottom: 1.38vw;
+
+          font-weight: 600;
+          font-size: 3.5rem;
+          line-height: 6.5rem;
+          color: #ffffff;
+        }
+        p {
+          max-width: 37rem;
+          margin-bottom: 2.78vw;
+
+          font-size: 2rem;
+          line-height: 3.2rem;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+@include mobile() {
+  .main {
+    .main-screen {
+      &__inner {
+        &__text {
+          width: 100%;
+          margin-bottom: 3rem;
+        }
+        &__info {
+          position: static;
+
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 949px) {
+  .main {
+    margin-top: 64px;
+  }
+}
+
+@media (max-width: 945px) and (min-width: 769px) {
+  .main {
+    .main-screen {
+      &__inner {
+        &__text {
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+@include tablet() {
+  .main {
+    .main-screen {
+      clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+      &__inner {
+        &__text {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
