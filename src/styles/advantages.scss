@@ -106,6 +106,14 @@
   }
 }
 
+@include tablet-and-mobile() {
+  .advantages {
+    #about-us {
+      top: -63px;
+    }
+  }
+}
+
 @media(max-width: 550px) {
   .advantages {
     &__block {

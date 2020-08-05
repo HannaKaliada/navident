@@ -10,6 +10,7 @@ import createSlides from './js_modules/Slider/createSlides';
 import closeSliderObBlur from './js_modules/Slider/closeSliderOnBlur';
 import toggleMenu from './js_modules/Menu/toggleMenu';
 import hideLoader from './js_modules/hideLoader';
+import closeMenuOnLinkClick from './js_modules/Menu/closeMenuOnLinkClick';
 
 window.addEventListener('DOMContentLoaded', () => {
     hideLoader();
@@ -23,4 +24,5 @@ window.addEventListener('DOMContentLoaded', () => {
     closeSlider();
     closeSliderObBlur();
     toggleMenu();
+    closeMenuOnLinkClick();
 });
