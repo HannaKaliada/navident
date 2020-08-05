@@ -13,7 +13,6 @@ import hideLoader from './js_modules/hideLoader';
 import closeMenuOnLinkClick from './js_modules/Menu/closeMenuOnLinkClick';
 
 window.addEventListener('DOMContentLoaded', () => {
-    hideLoader();
     scrollHandler();
     createSlides();
     initMap();
@@ -26,3 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
     toggleMenu();
     closeMenuOnLinkClick();
 });
+
+window.addEventListener('load', () => {
+    hideLoader();
+})
