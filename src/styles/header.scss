@@ -141,6 +141,16 @@
   }
 }
 
+@include tablet-and-mobile() {
+  .header__nav {
+    li {
+      a:hover {
+        color: #859097;
+      }
+    }
+  }
+}
+
 @media (max-width: 500px) {
   .header {
     &__nav {
