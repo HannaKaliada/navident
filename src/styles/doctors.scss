@@ -25,7 +25,9 @@
     margin-bottom: 2.4rem;
 
     background-color: #eeedf4;
-    img {
+    &__image {
+      background-size: cover;
+      background-position: center;
       width: 50%;
       height: 100%;
     }
@@ -53,6 +55,36 @@
   }
   &__card:nth-child(3n) {
     margin-right: 0;
+  }
+  &__card:first-child {
+    .doctors__card__image {
+      background-image: url("../assets/images/natalia.png");
+    }
+  }
+  &__card:nth-child(2) {
+    .doctors__card__image {
+      background-image: url("../assets/images/victor.png");
+    }
+  }
+  &__card:nth-child(3) {
+    .doctors__card__image {
+      background-image: url("../assets/images/stepan.png");
+    }
+  }
+  &__card:nth-child(4) {
+    .doctors__card__image {
+      background-image: url("../assets/images/tatsianaK.png");
+    }
+  }
+  &__card:nth-child(5) {
+    .doctors__card__image {
+      background-image: url("../assets/images/julia.png");
+    }
+  }
+  &__card:last-child {
+    .doctors__card__image {
+      background-image: url("../assets/images/tatsianaR.png");
+    }
   }
 }
 
@@ -120,7 +152,7 @@
   }
 }
 
-@media(max-width:480px) {
+@media (max-width: 480px) {
   .doctors {
     &__card {
       &__info {
