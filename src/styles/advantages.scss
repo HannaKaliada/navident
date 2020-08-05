@@ -109,7 +109,7 @@
 @media(max-width: 550px) {
   .advantages {
     &__block {
-      flex-direction: column-reverse;
+      flex-direction: column;
       &__info,
       &__list {
         width: 100%;
@@ -123,7 +123,7 @@
       }
     }
     &__block:last-child {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
   }
 }

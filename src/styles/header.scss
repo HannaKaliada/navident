@@ -13,24 +13,18 @@
 
     font-size: 1.4rem;
     line-height: 1.6rem;
-    a:before {
-      content: url("../assets/icons/header-phone.svg");
-
+    div {
+      display: flex;
+      align-items: center;
+    }
+    div:last-child {
+      margin-left: 5.4rem;
+    }
+    img {
       margin-right: 12px;
-
-      vertical-align: middle;
     }
     p {
-      margin-left: 5.4rem;
-
       color: #db162f;
-    }
-    p:before {
-      content: url("../assets/icons/header-location.svg");
-
-      margin-right: 12px;
-
-      vertical-align: middle;
     }
   }
   &__bottom {
@@ -88,7 +82,7 @@
 
       text-align: center;
 
-      background-color: rgba(355,355,355, 0.95);
+      background-color: rgba(355, 355, 355, 0.95);
       box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
       transform: translate(-100%);
 
@@ -166,11 +160,10 @@
 @media (max-width: 350px) {
   .header {
     &__contact-info {
-      p {
+      div:last-child {
         margin-left: 2rem;
       }
-      a:before,
-      p:before {
+      img {
         margin-right: 5px;
       }
     }

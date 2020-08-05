@@ -17,8 +17,14 @@
       <div id="header__top" class="header__top">
         <div class="container">
           <div class="header__contact-info">
-            <a href="tel:+375173023101">+375 17 - 302 - 31 - 01</a>
-            <p>г. Минск, Притыцкого, 97</p>
+            <div>
+              <img src="<%=require('./assets/icons/header-phone.svg')%>" />
+              <a href="tel:+375173023101">+375 17 - 302 - 31 - 01</a>
+            </div>
+            <div>
+              <img src="<%=require('./assets/icons/header-location.svg')%>" />
+              <p>г. Минск, Притыцкого, 97</p>
+            </div>
           </div>
         </div>
       </div>
@@ -30,9 +36,9 @@
         </button>
         <div class="container">
           <div class="header__bottom__inner">
-            <a class="header__logo" href=""
-              ><img src="<%=require('./assets/images/logo.png')%>"
-            /></a>
+            <a class="header__logo" href="">
+              <img src="<%=require('./assets/images/logo.png')%>" />
+            </a>
             <ul class="header__nav">
               <li>
                 <a class="header__nav__link" href="#about-us">О нас</a>

@@ -108,7 +108,18 @@
 @media(max-width: 500px) {
   .contacts {
     &__info {
-      width: 80%;
+      width: 90%;
+      li {
+        p {
+          font-size: 1.6rem;
+        }
+        span {
+          font-size: 1.4rem;
+        }
+        a {
+          font-size: 1.6rem;
+        }
+      }
     }
   }
 }
@@ -124,13 +135,3 @@
     }
   }
 }
-
-// @include mobile() {
-//     .contacts {
-//         flex-direction: column;
-//         &__info {
-//             width: 100%;
-//             padding: 3rem;
-//         }
-//     }
-// }
