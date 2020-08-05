@@ -132,3 +132,16 @@
     }
   }
 }
+
+@media (max-width: 350px){
+  .services {
+    &__list {
+      width: 100%;
+      .service {
+        h4{
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
