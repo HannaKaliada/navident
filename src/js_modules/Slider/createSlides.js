@@ -8,6 +8,7 @@ export default function createSlides() {
         'Какой-то текст',
         'Какой-то текст',
         'Какой-то текст',
+        'Какой-то текст',
     ];
     const slidesWrapper = document.querySelector('.swiper-wrapper');
     slidesText.forEach((text, index) => {
