@@ -1,532 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css"
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" href="<%=require('./assets/icons/favicon.png')%>" type="image/png">
-    <title>Навидент — качественная и доступная стоматология в Минске</title>
-    <meta name="description" content="Навидент — это высококвалифицированные специалисты, широкий спектр услуг, 
-    доступные цены в сочетании высоким качеством выполняемой работы, семейная и теплая атмосфера. ☎ +375 (17) 302-31-01 Звоните!"> 
-  </head>
-  <body>
-    <div id="preloader">
-      <div id="loader"></div>
-    </div>
-    <header class="header">
-      <div id="header__top" class="header__top">
-        <div class="container">
-          <div class="header__contact-info">
-            <div>
-              <img src="<%=require('./assets/icons/header-phone.svg')%>" />
-              <a href="tel:+375173023101">+375 17 - 302 - 31 - 01</a>
-            </div>
-            <div>
-              <img src="<%=require('./assets/icons/header-location.svg')%>" />
-              <p>г. Минск, Притыцкого, 97</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="header__bottom" class="header__bottom">
-        <button class="header__menu-btn">
-          <div></div>
-          <div></div>
-          <div></div>
-        </button>
-        <div class="container">
-          <div class="header__bottom__inner">
-            <a class="header__logo" href="">
-              <img src="<%=require('./assets/images/logo.png')%>" />
-            </a>
-            <ul class="header__nav">
-              <li>
-                <a class="header__nav__link" href="#about-us">О нас</a>
-              </li>
-              <li>
-                <a class="header__nav__link" href="#services">Услуги</a>
-              </li>
-              <li>
-                <a class="header__nav__link" href="#doctors">Сотрудники</a>
-              </li>
-              <li>
-                <a class="header__nav__link" href="#contacts">Контакты</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </header>
-    <main>
-      <div class="main">
-        <section class="main-screen">
-          <div class="container">
-            <div class="main-screen__inner">
-              <div class="main-screen__inner__text">
-                <h1>Качественная стоматология по доступным ценам</h1>
-                <p>
-                  Мы предлагаем комплексный подход в решении стоматологических
-                  проблем уже более 20 лет
-                </p>
-                <a
-                  class="appointment-btn appointment-btn_mobile"
-                  href="tel:+375173023101"
-                  >Записаться на приём</a
-                >
-                <a
-                  class="appointment-btn appointment-btn_desktop"
-                  href="#contacts"
-                  >Записаться на приём</a
-                >
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="gallery">
-          <div class="container">
-            <div class="gallery__inner">
-              <div class="gallery__preview">
-                <img
-                  class="gallery__preview__image"
-                  src="<%=require('./assets/images/01')%>"
-                />
-                <div class="gallery__preview__dark-layer">
-                  <span>Галерея</span>
-                  <img src="<%=require('./assets/icons/resize.svg')%>" />
-                </div>
-              </div>
-              <div class="gallery__slider hidden">
-                <div class="swiper-container">
-                  <button class="slider__close-btn">
-                    <img src="<%=require('./assets/icons/close.svg')%>" />
-                  </button>
-                  <div class="swiper-wrapper"></div>
-                  <img
-                    src="<%=require('./assets/icons/prev.svg')%>"
-                    class="swiper-button-prev"
-                  />
-                  <img
-                    src="<%=require('./assets/icons/next.svg')%>"
-                    class="swiper-button-next"
-                  />
-                </div>
-              </div>
-              <div class="gallery__text">
-                <h2>Многие годы мы занимаемся любимым делом</h2>
-                <p>
-                  И уверены, что сочетание высокого профессионализма
-                  с искренним желанием неравнодушного врача помочь пациенту приводит к 
-                  достижению желаемого результата.
-                </p>
-              </div>
-              <div class="gallery__info">
-                <div class="card card_white">
-                  <img src="<%=require('./assets/icons/red-phone.svg')%>" />
-                  <h4>Запись на приём</h4>
-                  <p>
-                    Наши ассистенты с радостью проконсультируют вас по любому
-                    интересующему вас вопросу
-                  </p>
-                  <a href="tel:+375173023101">+375 17 302 31 01</a>
-                </div>
-                <div class="card card_purple">
-                  <img src="<%=require('./assets/icons/purple-clock.svg')%>" />
-                  <h4>Часы работы</h4>
-                  <ul>
-                    <li>
-                      <span>Понедельник</span><span class="dots"></span
-                      ><span>8.00 - 20.00</span>
-                    </li>
-                    <li>
-                      <span>Вторник</span><span class="dots"></span
-                      ><span>8.00 - 20.00</span>
-                    </li>
-                    <li>
-                      <span>Среда</span><span class="dots"></span
-                      ><span>8.00 - 20.00</span>
-                    </li>
-                    <li>
-                      <span>Четверг</span><span class="dots"></span
-                      ><span>8.00 - 20.00</span>
-                    </li>
-                    <li>
-                      <span>Пятница</span><span class="dots"></span
-                      ><span>8.00 - 20.00</span>
-                    </li>
-                    <!-- <li>
-                      <span>Суббота</span><span class="dots"></span
-                      ><span>выходной (временно)</span>
-                    </li> -->
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="scroll-to-section advantages">
-          <div id="about-us"></div>
-          <div class="advantages__block">
-            <div class="advantages__block__image"></div>
-            <ul class="advantages__block__list">
-              <li>
-                <img src="<%=require('./assets/icons/icon-star.svg')%>" />
-                <div>
-                  <h5>Высокая квалификация</h5>
-                  <p>
-                    Наши врачи, имея большой опыт работы и высокую квалификацию, постоянно повышают уровень знаний и совершенствуют свое мастерство.
-                  </p>
-                </div>
-              </li>
-              <li>
-                <img src="<%=require('./assets/icons/icon-heart.svg')%>" />
-                <div>
-                  <h5>Современное оборудование</h5>
-                  <p>
-                    Клиника оснащена оборудованием, обеспечивающим применение современных технологий
-                  </p>
-                </div>
-              </li>
-              <li>
-                <img src="<%=require('./assets/icons/icon-location.svg')%>" />
-                <div>
-                  <h5>Удобное расположение</h5>
-                  <p>
-                    Клиника располагается в 3 минутах ходьбы от станции метро
-                    “Каменная горка”
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="advantages__block">
-            <div class="advantages__block__info">
-              <h3>“Навидент” – современная стоматология в Минске</h3>
-              <p>
-                Мы строим искренние отношения, основанные на доверии и
-                взаимопонимании. 
-              </p>
-              <a
-                class="appointment-btn appointment-btn_mobile"
-                href="tel:+375173023101"
-                >Записаться на приём</a
-              >
-              <a
-                class="appointment-btn appointment-btn_desktop"
-                href="#contacts"
-                >Записаться на приём</a
-              >
-            </div>
-            <div class="advantages__block__image"></div>
-          </div>
-        </section>
-        <section class="scroll-to-section services">
-          <div id="services"></div>
-          <div class="container">
-            <div class="services__info">
-              <ul class="services__list">
-                <li class="service active" data-table="0">
-                  <svg
-                    width="32"
-                    height="48"
-                    viewBox="0 0 32 48"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0)">
-                      <path
-                        d="M29.7323 18.437C31.5842 12.7914 34.109 5.05827 28.9007 1.7704C27.0146 0.578701 25.2099 0 23.3838 0C21.399 0 19.753 0.698727 18.4284 1.26028C17.4853 1.65894 16.6708 2.00616 16.0021 2.00616C15.3334 2.00616 14.5146 1.65894 13.5716 1.26028C12.247 0.698727 10.5966 0 8.61618 0C6.79006 0 4.98537 0.578701 3.09924 1.7704C-2.10907 5.05827 0.420068 12.7914 2.26762 18.437C2.9192 20.4217 3.48075 22.1321 3.57934 23.2509C3.74224 25.0213 3.57077 27.1646 3.39073 29.4409C3.12924 32.7759 2.85061 36.2309 3.60078 38.983C4.86106 43.6126 8.92482 47.0076 9.09629 47.1534C9.22918 47.2648 9.39207 47.3206 9.55068 47.3206C9.67499 47.3206 9.80359 47.2863 9.91076 47.222C10.1722 47.0676 10.3051 46.7719 10.2494 46.4761C10.2365 46.3904 8.68906 38.0571 10.6266 32.7287C12.2384 28.292 14.9819 25.9772 16.0021 25.9772C17.0223 25.9772 19.7615 28.292 21.3733 32.7244C23.3066 38.0485 21.7634 46.3904 21.742 46.4718C21.6905 46.7676 21.8234 47.0676 22.0806 47.2177C22.3421 47.372 22.6679 47.3463 22.8994 47.1534C23.0708 47.0119 27.1389 43.6126 28.3992 38.983C29.1451 36.2352 28.875 32.7802 28.6092 29.4366C28.4335 27.1689 28.262 25.0213 28.4249 23.2509C28.5235 22.1321 29.085 20.4174 29.7323 18.437Z"
-                        fill="#DDDCE5"
-                      />
-                      <path
-                        d="M22.4236 11.3768H18.3084V7.26587H13.6916V11.3768H9.57642V15.9935H13.6916V20.1087H18.3084V15.9935H22.4236V11.3768Z"
-                        fill="white"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0">
-                        <rect width="32" height="47.3163" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  <h4>Ортопедия</h4>
-                </li>
-                <li class="service" data-table="1">
-                  <svg
-                    width="32"
-                    height="56"
-                    viewBox="0 0 32 56"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip1)">
-                      <path
-                        d="M26.0181 7.75368C25.7671 3.87197 22.9137 0.946199 22.5902 0.622723C21.755 -0.207694 20.379 -0.207694 19.5631 0.637207C18.7327 1.47728 18.7375 2.82912 19.5776 3.66436C20.099 4.18096 21.6198 6.09285 21.7502 8.02888C21.9626 11.3312 18.9741 13.3735 18.1195 13.8852C15.9711 13.0452 13.4364 13.4894 11.6983 15.2274C9.92157 17.0041 9.49671 19.6209 10.4189 21.7983C10.4189 21.8032 10.414 21.8032 10.414 21.808C9.05253 24.0772 2.69405 27.7078 0.424888 35.7271C-1.84427 43.7464 5.56671 56.3041 7.99037 54.7881C10.4092 53.2769 9.95537 46.4694 8.89803 42.0808C7.83587 37.6921 9.95537 30.735 13.1322 25.4387C13.2432 25.2552 13.3495 25.0766 13.4508 24.9076C15.6572 25.9118 18.3513 25.5111 20.1666 23.6957C22.0157 21.8466 22.3971 19.0995 21.3253 16.8689C21.7936 16.5213 22.3295 16.0772 22.8703 15.5364C24.5456 13.8708 26.2499 11.2733 26.0181 7.75368ZM17.067 20.5962C16.4394 21.2238 15.4255 21.2238 14.7979 20.5962C14.1702 19.9685 14.1702 18.9546 14.7979 18.327C15.4255 17.6994 16.4394 17.6994 17.067 18.327C17.6947 18.9546 17.6947 19.9734 17.067 20.5962Z"
-                        fill="#DDDCE5"
-                      />
-                      <path
-                        d="M11.0465 14.5757C11.5824 14.0397 12.2004 13.6149 12.8618 13.2914C11.679 12.3355 10.0857 10.5829 10.2402 8.14475C10.3899 5.83697 12.3935 3.7899 12.408 3.78024C12.4128 3.77541 12.4128 3.77541 12.4176 3.77058C13.2481 2.94017 13.2529 1.58833 12.4273 0.753081C11.5969 -0.0869914 10.2402 -0.0918194 9.40014 0.738597C9.39532 0.743425 9.39049 0.748253 9.38566 0.757909C8.98976 1.15863 6.22332 4.05061 5.97709 7.87439C5.71638 11.8816 7.95174 14.6819 9.80087 16.2944C10.1147 15.6668 10.5299 15.0874 11.0465 14.5757Z"
-                        fill="#DDDCE5"
-                      />
-                      <path
-                        d="M16.1401 21.7694C16.1401 21.7694 16.1932 21.7452 16.2704 21.7114C16.0387 21.4652 16.1401 21.7694 16.1401 21.7694Z"
-                        fill="#DDDCE5"
-                      />
-                      <path
-                        d="M22.0447 22.6868C21.7309 23.2903 21.3205 23.8503 20.8232 24.3524C20.2487 24.927 19.5776 25.3711 18.8631 25.7043C22.0399 31.0006 24.1594 37.9577 23.0972 42.3464C22.0399 46.735 21.5861 53.5425 24.0049 55.0537C26.4237 56.5649 33.8395 44.0072 31.5704 35.9927C29.4992 28.659 24.0097 24.9994 22.0447 22.6868Z"
-                        fill="#DDDCE5"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip1">
-                        <rect width="32" height="55.1792" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  <h4>Хирургия</h4>
-                </li>
-                <li class="service" data-table="2">
-                  <svg
-                    width="46"
-                    height="46"
-                    viewBox="0 0 46 46"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip2)">
-                      <path
-                        d="M28.7837 21.467L25.0209 17.7039C24.891 17.574 24.6745 17.574 24.5446 17.7039L0.890162 41.3608C0.760246 41.4907 0.760246 41.7072 0.890162 41.8372L4.65292 45.6003C4.78284 45.7303 4.99937 45.7303 5.12928 45.6003L28.7837 21.9435C28.9136 21.8135 28.9136 21.6018 28.7837 21.467Z"
-                        fill="#DDDCE5"
-                      />
-                      <path
-                        d="M25.4684 17.3045L29.1878 21.0244C29.3178 21.1543 29.5343 21.1543 29.6642 21.0244L30.9971 19.6914C31.127 19.5567 31.127 19.3449 30.9971 19.215L27.2776 15.4952C27.1477 15.3652 26.9311 15.3652 26.8012 15.4952L25.4684 16.8281C25.3337 16.9581 25.3337 17.1698 25.4684 17.3045Z"
-                        fill="#DDDCE5"
-                      />
-                      <path
-                        d="M27.6625 15.1053L31.382 18.8252C31.5119 18.9551 31.7284 18.9551 31.8583 18.8252L33.1912 17.4922C33.3211 17.3623 33.3211 17.1457 33.1912 17.0158L29.4717 13.2959C29.3418 13.166 29.1253 13.166 28.9954 13.2959L27.6625 14.6289C27.5326 14.7588 27.5326 14.9754 27.6625 15.1053Z"
-                        fill="#DDDCE5"
-                      />
-                      <path
-                        d="M45.2061 0.639834C45.2061 0.452157 45.0569 0.302979 44.8692 0.302979H43.7C43.6086 0.302979 43.5268 0.336664 43.4594 0.399223C43.3969 0.461782 43.3584 0.548402 43.3584 0.639834V4.4463H40.9188C40.8274 4.4463 40.7456 4.47998 40.6782 4.54254L31.2425 13.9889C31.1125 14.1189 31.1125 14.3354 31.2425 14.4653L32.0701 15.293C32.2 15.423 32.4165 15.423 32.5464 15.293L41.5492 6.28938H44.8741C45.0617 6.28938 45.2109 6.1402 45.2109 5.95252L45.2061 0.639834Z"
-                        fill="#DDDCE5"
-                      />
-                      <path
-                        d="M22.3504 18.5894L18.5877 22.3525C18.4578 22.4825 18.4578 22.699 18.5877 22.829L41.655 45.8987C41.7849 46.0287 42.0015 46.0287 42.1314 45.8987L45.8941 42.1356C46.0241 42.0056 46.0241 41.7891 45.8941 41.6592L22.8268 18.5894C22.6969 18.4595 22.4852 18.4595 22.3504 18.5894Z"
-                        fill="#DDDCE5"
-                      />
-                      <path
-                        d="M20.0985 16.3806L16.3791 20.1004C16.2491 20.2304 16.2491 20.4469 16.3791 20.5769L17.7119 21.9098C17.8418 22.0398 18.0583 22.0398 18.1883 21.9098L21.9077 18.19C22.0376 18.0601 22.0376 17.8435 21.9077 17.7136L20.5749 16.3806C20.4401 16.2459 20.2284 16.2459 20.0985 16.3806Z"
-                        fill="#DDDCE5"
-                      />
-                      <path
-                        d="M18.3759 14.1814C18.246 14.0515 18.0295 14.0515 17.8996 14.1814L14.1801 17.9013C14.0502 18.0312 14.0502 18.2478 14.1801 18.3777L15.513 19.7107C15.6429 19.8406 15.8594 19.8406 15.9893 19.7107L19.7088 15.9908C19.8387 15.8609 19.8387 15.6443 19.7088 15.5144L18.3759 14.1814Z"
-                        fill="#DDDCE5"
-                      />
-                      <path
-                        d="M6.30854 7.50729L14.6376 15.8372C14.7675 15.9672 14.9841 15.9672 15.114 15.8372L15.8357 15.1154C15.9657 14.9855 15.9657 14.7689 15.8357 14.639L7.50666 6.30905C8.54599 4.71139 8.33908 2.56033 6.97256 1.19366C5.37988 -0.399188 2.78636 -0.399188 1.19368 1.19366C-0.398993 2.7865 -0.398993 5.38029 1.19368 6.97313C2.56021 8.3398 4.71105 8.54673 6.30854 7.50729Z"
-                        fill="#DDDCE5"
-                      />
-                      <path
-                        d="M6.04837 2.12212C7.131 3.20487 7.131 4.96133 6.04837 6.04889C4.96573 7.13164 3.20945 7.13164 2.12201 6.04889C1.03937 4.96614 1.03937 3.20968 2.12201 2.12212C3.20464 1.03937 4.96092 1.03937 6.04837 2.12212Z"
-                        fill="white"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip2">
-                        <rect width="46" height="46" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
 
-                  <h4>Терапия</h4>
-                </li>
-              </ul>
-              <h2>Популярные услуги клиники <span>“Навидент”</span></h2>
-            </div>
-            <div class="services__prices">
-              <div class="service">
-                <div class="service__name">
-                  Консультация с анализом 3D снимка
-                </div>
-                <div class="service__price">14.00 руб.</div>
-              </div>
-              <div class="service">
-                <div class="service__name">Вкладка культевая штифтовая</div>
-                <div class="service__price">от 70.00 руб.</div>
-              </div>
-              <div class="service">
-                <div class="service__name">
-                  Стекловолоконный штифт (без стоимости пломбы)
-                </div>
-                <div class="service__price">70.00 руб.</div>
-              </div>
-              <div class="service">
-                <div class="service__name">
-                  Временная коронка из композитного материала
-                </div>
-                <div class="service__price">30.00 руб.</div>
-              </div>
-              <div class="service">
-                <div class="service__name">Металлокерамическая коронка</div>
-                <div class="service__price">от 250.00 руб.</div>
-              </div>
-              <div class="service">
-                <div class="service__name">
-                  Металлокерамическая коронка на имплантате
-                </div>
-                <div class="service__price">от 400.00 руб.</div>
-              </div>
-              <div class="service">
-                <div class="service__name">Коронка из диоксида циркония</div>
-                <div class="service__price">от 500.00 руб.</div>
-              </div>
-              <div class="service">
-                <div class="service__name">
-                  Коронка из прессованной керамики
-                </div>
-                <div class="service__price">от 600.00 руб.</div>
-              </div>
-              <div class="service">
-                <div class="service__name">
-                  Съемный протез из нейлона или ацетала
-                </div>
-                <div class="service__price">от 750.00 руб.</div>
-              </div>
-              <div class="service">
-                <div class="service__name">Бюгельный протез с кламмерами</div>
-                <div class="service__price">от 900.00 руб.</div>
-              </div>
-              <div class="service">
-                <div class="service__name">Бюгельный протез с аттачменами</div>
-                <div class="service__price">от 1050.00 руб.</div>
-              </div>
-              <div class="service">
-                <div class="service__name">
-                  Полный съемный пластиночный протез
-                </div>
-                <div class="service__price">от 450.00 руб.</div>
-              </div>
-              <div class="service">
-                <div class="service__name">Частичный съемный пластиночный протез</div>
-                <div class="service__price">от 400.00 руб.</div>
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="yandex-verification" content="385d1d6d2952fd8a" />
+  <meta name="google-site-verification" content="uauXS8vTp9wzRGj9DWqGWYmu832eTXKV-9DFlfEswlc" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="<%=require('./assets/icons/favicon.png')%>" type="image/png">
+  <title>Навидент — качественная и доступная стоматология в Минске</title>
+  <meta name="description"
+    content="Навидент — это высококвалифицированные специалисты, широкий спектр услуг, 
+    доступные цены в сочетании высоким качеством выполняемой работы, семейная и теплая атмосфера. ☎ +375 (17) 302-31-01 Звоните!">
+</head>
+
+<body>
+  <div id="preloader">
+    <div id="loader"></div>
+  </div>
+  <header class="header">
+    <div id="header__top" class="header__top">
+      <div class="container">
+        <div class="header__contact-info">
+          <div>
+            <img src="<%=require('./assets/icons/header-phone.svg')%>" />
+            <a href="tel:+375173023101">+375 17 - 302 - 31 - 01</a>
+          </div>
+          <div>
+            <img src="<%=require('./assets/icons/header-location.svg')%>" />
+            <p>г. Минск, Притыцкого, 97</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="header__bottom" class="header__bottom">
+      <button class="header__menu-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+      <div class="container">
+        <div class="header__bottom__inner">
+          <a class="header__logo" href="">
+            <img src="<%=require('./assets/images/logo.png')%>" />
+          </a>
+          <ul class="header__nav">
+            <li>
+              <a class="header__nav__link" href="#about-us">О нас</a>
+            </li>
+            <li>
+              <a class="header__nav__link" href="#services">Услуги</a>
+            </li>
+            <li>
+              <a class="header__nav__link" href="#doctors">Сотрудники</a>
+            </li>
+            <li>
+              <a class="header__nav__link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="main">
+      <section class="main-screen">
+        <div class="container">
+          <div class="main-screen__inner">
+            <div class="main-screen__inner__text">
+              <h1>Качественная стоматология по доступным ценам</h1>
+              <p>
+                Мы предлагаем комплексный подход в решении стоматологических
+                проблем уже более 20 лет
+              </p>
+              <a class="appointment-btn appointment-btn_mobile" href="tel:+375173023101">Записаться на приём</a>
+              <a class="appointment-btn appointment-btn_desktop" href="#contacts">Записаться на приём</a>
             </div>
           </div>
-        </section>
-        <section class="call-to-action">
-          <div class="container">
-            <h2>Не знаете с чего начать?</h2>
-            <p>Запишитесь на прием к специалисту для первичной диагностики</p>
-            <a
-              class="appointment-btn appointment-btn_mobile"
-              href="tel:+375173023101"
-            >
-              Записаться на приём</a
-            >
-            <a class="appointment-btn appointment-btn_desktop" href="#contacts">
-              Записаться на приём</a
-            >
-          </div>
-        </section>
-        <section id="doctors" class="scroll-to-section doctors">
-          <div class="container">
-            <h2>Наши сотрудники</h2>
-            <div class="doctors__list">
-              <div class="doctors__card">
-                <div class="doctors__card__image"></div>
-                <div class="doctors__card__info">
-                  <h5>Запрейко Наталья Валерьевна</h5>
-                  <p>Стоматолог-терапевт</p>
-                  <p><b>Стаж работы:</b> 29 лет</p>
-                  <p><b>Категория:</b> Первая</p>
-                </div>
+        </div>
+      </section>
+      <section class="gallery">
+        <div class="container">
+          <div class="gallery__inner">
+            <div class="gallery__preview">
+              <img class="gallery__preview__image" src="<%=require('./assets/images/01')%>" />
+              <div class="gallery__preview__dark-layer">
+                <span>Галерея</span>
+                <img src="<%=require('./assets/icons/resize.svg')%>" />
               </div>
-              <div class="doctors__card">
-                <div class="doctors__card__image"></div>
-                <div class="doctors__card__info">
-                  <h5>Запрейко Виктор Евгеньевич</h5>
-                  <p>Стоматолог-ортопед</p>
-                  <p><b>Стаж работы:</b> 28 лет</p>
-                  <p><b>Категория:</b> Первая</p>
-                </div>
+            </div>
+            <div class="gallery__slider hidden">
+              <div class="swiper-container">
+                <button class="slider__close-btn">
+                  <img src="<%=require('./assets/icons/close.svg')%>" />
+                </button>
+                <div class="swiper-wrapper"></div>
+                <img src="<%=require('./assets/icons/prev.svg')%>" class="swiper-button-prev" />
+                <img src="<%=require('./assets/icons/next.svg')%>" class="swiper-button-next" />
               </div>
-              <div class="doctors__card">
-                <div class="doctors__card__image"></div>
-                <div class="doctors__card__info">
-                  <h5>Запрейко Степан Викторович</h5>
-                  <p>Стоматолог-хирург</p>
-                  <p><b>Стаж работы:</b> 6 лет</p>
-                  <p><b>Категория:</b> Первая</p>
-                </div>
+            </div>
+            <div class="gallery__text">
+              <h2>Многие годы мы занимаемся любимым делом</h2>
+              <p>
+                И уверены, что сочетание высокого профессионализма
+                с искренним желанием неравнодушного врача помочь пациенту приводит к
+                достижению желаемого результата.
+              </p>
+            </div>
+            <div class="gallery__info">
+              <div class="card card_white">
+                <img src="<%=require('./assets/icons/red-phone.svg')%>" />
+                <h4>Запись на приём</h4>
+                <p>
+                  Наши ассистенты с радостью проконсультируют вас по любому
+                  интересующему вас вопросу
+                </p>
+                <a href="tel:+375173023101">+375 17 302 31 01</a>
               </div>
-              <div class="doctors__card">
-                <div class="doctors__card__image"></div>
-                <div class="doctors__card__info">
-                  <h5>Каледа Татьяна Владимировна</h5>
-                  <p>Ассистент стоматолога</p>
-                  <p><b>Стаж работы:</b> 30 лет</p>
-                  <p><b>Категория:</b> Высшая</p>
-                </div>
-              </div>
-              <div class="doctors__card">
-                <div class="doctors__card__image"></div>
-                <div class="doctors__card__info">
-                  <h5>Дубровская Юлия Сергеевна</h5>
-                  <p>Ассистент стоматолога</p>
-                  <p><b>Стаж работы:</b> 18 лет</p>
-                  <p><b>Категория:</b> Высшая</p>
-                </div>
-              </div>
-              <div class="doctors__card">
-                <div class="doctors__card__image"></div>
-                <div class="doctors__card__info">
-                  <h5>Раткевич Татьяна Николаевна</h5>
-                  <p>Ассистент стоматолога</p>
-                  <p><b>Стаж работы:</b> 29 лет</p>
-                  <p><b>Категория:</b> Высшая</p>
-                </div>
+              <div class="card card_purple">
+                <img src="<%=require('./assets/icons/purple-clock.svg')%>" />
+                <h4>Часы работы</h4>
+                <ul>
+                  <li>
+                    <span>Понедельник</span><span class="dots"></span><span>8.00 - 20.00</span>
+                  </li>
+                  <li>
+                    <span>Вторник</span><span class="dots"></span><span>8.00 - 20.00</span>
+                  </li>
+                  <li>
+                    <span>Среда</span><span class="dots"></span><span>8.00 - 20.00</span>
+                  </li>
+                  <li>
+                    <span>Четверг</span><span class="dots"></span><span>8.00 - 20.00</span>
+                  </li>
+                  <li>
+                    <span>Пятница</span><span class="dots"></span><span>8.00 - 20.00</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-        </section>
-        <section class="scroll-to-section contacts">
-          <div id="contacts"></div>
-          <div id="map" class="map"></div>
-          <div class="contacts__info">
-            <h3>Стоматологическая клиника <span>“Навидент”</span></h3>
-            <ul>
-              <li>
-                <img src="<%=require('./assets/icons/location.svg')%>" />
-                <div>
-                  <p>г. Минск, Притыцкого, 97</p>
-                  <span>(вход со стороны двора)</span>
-                </div>
+        </div>
+      </section>
+      <section class="scroll-to-section advantages">
+        <div id="about-us"></div>
+        <div class="advantages__block">
+          <div class="advantages__block__image"></div>
+          <ul class="advantages__block__list">
+            <li>
+              <img src="<%=require('./assets/icons/icon-star.svg')%>" />
+              <div>
+                <h5>Высокая квалификация</h5>
+                <p>
+                  Наши врачи, имея большой опыт работы и высокую квалификацию, постоянно повышают уровень знаний и
+                  совершенствуют свое мастерство.
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="<%=require('./assets/icons/icon-heart.svg')%>" />
+              <div>
+                <h5>Современное оборудование</h5>
+                <p>
+                  Клиника оснащена оборудованием, обеспечивающим применение современных технологий
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="<%=require('./assets/icons/icon-location.svg')%>" />
+              <div>
+                <h5>Удобное расположение</h5>
+                <p>
+                  Клиника располагается в 3 минутах ходьбы от станции метро
+                  “Каменная горка”
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="advantages__block">
+          <div class="advantages__block__info">
+            <h3>“Навидент” – современная стоматология в Минске</h3>
+            <p>
+              Мы строим искренние отношения, основанные на доверии и
+              взаимопонимании.
+            </p>
+            <a class="appointment-btn appointment-btn_mobile" href="tel:+375173023101">Записаться на приём</a>
+            <a class="appointment-btn appointment-btn_desktop" href="#contacts">Записаться на приём</a>
+          </div>
+          <div class="advantages__block__image"></div>
+        </div>
+      </section>
+      <section class="scroll-to-section services">
+        <div id="services"></div>
+        <div class="container">
+          <div class="services__info">
+            <ul class="services__list">
+              <li class="service active" data-table="0">
+                <svg width="32" height="48" viewBox="0 0 32 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0)">
+                    <path
+                      d="M29.7323 18.437C31.5842 12.7914 34.109 5.05827 28.9007 1.7704C27.0146 0.578701 25.2099 0 23.3838 0C21.399 0 19.753 0.698727 18.4284 1.26028C17.4853 1.65894 16.6708 2.00616 16.0021 2.00616C15.3334 2.00616 14.5146 1.65894 13.5716 1.26028C12.247 0.698727 10.5966 0 8.61618 0C6.79006 0 4.98537 0.578701 3.09924 1.7704C-2.10907 5.05827 0.420068 12.7914 2.26762 18.437C2.9192 20.4217 3.48075 22.1321 3.57934 23.2509C3.74224 25.0213 3.57077 27.1646 3.39073 29.4409C3.12924 32.7759 2.85061 36.2309 3.60078 38.983C4.86106 43.6126 8.92482 47.0076 9.09629 47.1534C9.22918 47.2648 9.39207 47.3206 9.55068 47.3206C9.67499 47.3206 9.80359 47.2863 9.91076 47.222C10.1722 47.0676 10.3051 46.7719 10.2494 46.4761C10.2365 46.3904 8.68906 38.0571 10.6266 32.7287C12.2384 28.292 14.9819 25.9772 16.0021 25.9772C17.0223 25.9772 19.7615 28.292 21.3733 32.7244C23.3066 38.0485 21.7634 46.3904 21.742 46.4718C21.6905 46.7676 21.8234 47.0676 22.0806 47.2177C22.3421 47.372 22.6679 47.3463 22.8994 47.1534C23.0708 47.0119 27.1389 43.6126 28.3992 38.983C29.1451 36.2352 28.875 32.7802 28.6092 29.4366C28.4335 27.1689 28.262 25.0213 28.4249 23.2509C28.5235 22.1321 29.085 20.4174 29.7323 18.437Z"
+                      fill="#DDDCE5" />
+                    <path
+                      d="M22.4236 11.3768H18.3084V7.26587H13.6916V11.3768H9.57642V15.9935H13.6916V20.1087H18.3084V15.9935H22.4236V11.3768Z"
+                      fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect width="32" height="47.3163" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h4>Ортопедия</h4>
               </li>
-              <li>
-                <img src="<%=require('./assets/icons/clock.svg')%>" />
-                <div>
-                  <p>Работаем c 8:00 до 20:00 по будням</p>
-                  <!-- <p>с 9:00 до 15:00 в субботу</p> -->
-                </div>
+              <li class="service" data-table="1">
+                <svg width="32" height="56" viewBox="0 0 32 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip1)">
+                    <path
+                      d="M26.0181 7.75368C25.7671 3.87197 22.9137 0.946199 22.5902 0.622723C21.755 -0.207694 20.379 -0.207694 19.5631 0.637207C18.7327 1.47728 18.7375 2.82912 19.5776 3.66436C20.099 4.18096 21.6198 6.09285 21.7502 8.02888C21.9626 11.3312 18.9741 13.3735 18.1195 13.8852C15.9711 13.0452 13.4364 13.4894 11.6983 15.2274C9.92157 17.0041 9.49671 19.6209 10.4189 21.7983C10.4189 21.8032 10.414 21.8032 10.414 21.808C9.05253 24.0772 2.69405 27.7078 0.424888 35.7271C-1.84427 43.7464 5.56671 56.3041 7.99037 54.7881C10.4092 53.2769 9.95537 46.4694 8.89803 42.0808C7.83587 37.6921 9.95537 30.735 13.1322 25.4387C13.2432 25.2552 13.3495 25.0766 13.4508 24.9076C15.6572 25.9118 18.3513 25.5111 20.1666 23.6957C22.0157 21.8466 22.3971 19.0995 21.3253 16.8689C21.7936 16.5213 22.3295 16.0772 22.8703 15.5364C24.5456 13.8708 26.2499 11.2733 26.0181 7.75368ZM17.067 20.5962C16.4394 21.2238 15.4255 21.2238 14.7979 20.5962C14.1702 19.9685 14.1702 18.9546 14.7979 18.327C15.4255 17.6994 16.4394 17.6994 17.067 18.327C17.6947 18.9546 17.6947 19.9734 17.067 20.5962Z"
+                      fill="#DDDCE5" />
+                    <path
+                      d="M11.0465 14.5757C11.5824 14.0397 12.2004 13.6149 12.8618 13.2914C11.679 12.3355 10.0857 10.5829 10.2402 8.14475C10.3899 5.83697 12.3935 3.7899 12.408 3.78024C12.4128 3.77541 12.4128 3.77541 12.4176 3.77058C13.2481 2.94017 13.2529 1.58833 12.4273 0.753081C11.5969 -0.0869914 10.2402 -0.0918194 9.40014 0.738597C9.39532 0.743425 9.39049 0.748253 9.38566 0.757909C8.98976 1.15863 6.22332 4.05061 5.97709 7.87439C5.71638 11.8816 7.95174 14.6819 9.80087 16.2944C10.1147 15.6668 10.5299 15.0874 11.0465 14.5757Z"
+                      fill="#DDDCE5" />
+                    <path
+                      d="M16.1401 21.7694C16.1401 21.7694 16.1932 21.7452 16.2704 21.7114C16.0387 21.4652 16.1401 21.7694 16.1401 21.7694Z"
+                      fill="#DDDCE5" />
+                    <path
+                      d="M22.0447 22.6868C21.7309 23.2903 21.3205 23.8503 20.8232 24.3524C20.2487 24.927 19.5776 25.3711 18.8631 25.7043C22.0399 31.0006 24.1594 37.9577 23.0972 42.3464C22.0399 46.735 21.5861 53.5425 24.0049 55.0537C26.4237 56.5649 33.8395 44.0072 31.5704 35.9927C29.4992 28.659 24.0097 24.9994 22.0447 22.6868Z"
+                      fill="#DDDCE5" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip1">
+                      <rect width="32" height="55.1792" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h4>Хирургия</h4>
               </li>
-              <li>
-                <img src="<%=require('./assets/icons/phone.svg')%>" />
-                <a href="tel:+375173023101">+375 17 - 302 - 31 - 01</a>
+              <li class="service" data-table="2">
+                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip2)">
+                    <path
+                      d="M28.7837 21.467L25.0209 17.7039C24.891 17.574 24.6745 17.574 24.5446 17.7039L0.890162 41.3608C0.760246 41.4907 0.760246 41.7072 0.890162 41.8372L4.65292 45.6003C4.78284 45.7303 4.99937 45.7303 5.12928 45.6003L28.7837 21.9435C28.9136 21.8135 28.9136 21.6018 28.7837 21.467Z"
+                      fill="#DDDCE5" />
+                    <path
+                      d="M25.4684 17.3045L29.1878 21.0244C29.3178 21.1543 29.5343 21.1543 29.6642 21.0244L30.9971 19.6914C31.127 19.5567 31.127 19.3449 30.9971 19.215L27.2776 15.4952C27.1477 15.3652 26.9311 15.3652 26.8012 15.4952L25.4684 16.8281C25.3337 16.9581 25.3337 17.1698 25.4684 17.3045Z"
+                      fill="#DDDCE5" />
+                    <path
+                      d="M27.6625 15.1053L31.382 18.8252C31.5119 18.9551 31.7284 18.9551 31.8583 18.8252L33.1912 17.4922C33.3211 17.3623 33.3211 17.1457 33.1912 17.0158L29.4717 13.2959C29.3418 13.166 29.1253 13.166 28.9954 13.2959L27.6625 14.6289C27.5326 14.7588 27.5326 14.9754 27.6625 15.1053Z"
+                      fill="#DDDCE5" />
+                    <path
+                      d="M45.2061 0.639834C45.2061 0.452157 45.0569 0.302979 44.8692 0.302979H43.7C43.6086 0.302979 43.5268 0.336664 43.4594 0.399223C43.3969 0.461782 43.3584 0.548402 43.3584 0.639834V4.4463H40.9188C40.8274 4.4463 40.7456 4.47998 40.6782 4.54254L31.2425 13.9889C31.1125 14.1189 31.1125 14.3354 31.2425 14.4653L32.0701 15.293C32.2 15.423 32.4165 15.423 32.5464 15.293L41.5492 6.28938H44.8741C45.0617 6.28938 45.2109 6.1402 45.2109 5.95252L45.2061 0.639834Z"
+                      fill="#DDDCE5" />
+                    <path
+                      d="M22.3504 18.5894L18.5877 22.3525C18.4578 22.4825 18.4578 22.699 18.5877 22.829L41.655 45.8987C41.7849 46.0287 42.0015 46.0287 42.1314 45.8987L45.8941 42.1356C46.0241 42.0056 46.0241 41.7891 45.8941 41.6592L22.8268 18.5894C22.6969 18.4595 22.4852 18.4595 22.3504 18.5894Z"
+                      fill="#DDDCE5" />
+                    <path
+                      d="M20.0985 16.3806L16.3791 20.1004C16.2491 20.2304 16.2491 20.4469 16.3791 20.5769L17.7119 21.9098C17.8418 22.0398 18.0583 22.0398 18.1883 21.9098L21.9077 18.19C22.0376 18.0601 22.0376 17.8435 21.9077 17.7136L20.5749 16.3806C20.4401 16.2459 20.2284 16.2459 20.0985 16.3806Z"
+                      fill="#DDDCE5" />
+                    <path
+                      d="M18.3759 14.1814C18.246 14.0515 18.0295 14.0515 17.8996 14.1814L14.1801 17.9013C14.0502 18.0312 14.0502 18.2478 14.1801 18.3777L15.513 19.7107C15.6429 19.8406 15.8594 19.8406 15.9893 19.7107L19.7088 15.9908C19.8387 15.8609 19.8387 15.6443 19.7088 15.5144L18.3759 14.1814Z"
+                      fill="#DDDCE5" />
+                    <path
+                      d="M6.30854 7.50729L14.6376 15.8372C14.7675 15.9672 14.9841 15.9672 15.114 15.8372L15.8357 15.1154C15.9657 14.9855 15.9657 14.7689 15.8357 14.639L7.50666 6.30905C8.54599 4.71139 8.33908 2.56033 6.97256 1.19366C5.37988 -0.399188 2.78636 -0.399188 1.19368 1.19366C-0.398993 2.7865 -0.398993 5.38029 1.19368 6.97313C2.56021 8.3398 4.71105 8.54673 6.30854 7.50729Z"
+                      fill="#DDDCE5" />
+                    <path
+                      d="M6.04837 2.12212C7.131 3.20487 7.131 4.96133 6.04837 6.04889C4.96573 7.13164 3.20945 7.13164 2.12201 6.04889C1.03937 4.96614 1.03937 3.20968 2.12201 2.12212C3.20464 1.03937 4.96092 1.03937 6.04837 2.12212Z"
+                      fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip2">
+                      <rect width="46" height="46" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <h4>Терапия</h4>
               </li>
             </ul>
+            <h2>Популярные услуги клиники <span>“Навидент”</span></h2>
           </div>
-          <img
-            class="contacts__image"
-            src="<%=require('./assets/images/05.png')%>"
-          />
-        </section>
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="container">© 2020 Стоматология Навидент</div>
-    </footer>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js"></script>
-  </body>
+          <div class="services__prices">
+            <div class="service">
+              <div class="service__name">
+                Консультация с анализом 3D снимка
+              </div>
+              <div class="service__price">30.00 руб.</div>
+            </div>
+            <div class="service">
+              <div class="service__name">Вкладка культевая штифтовая</div>
+              <div class="service__price">от 105.00 руб.</div>
+            </div>
+            <div class="service">
+              <div class="service__name">
+                Стекловолоконный штифт (без стоимости пломбы)
+              </div>
+              <div class="service__price">66.00 руб.</div>
+            </div>
+            <div class="service">
+              <div class="service__name">
+                Временная коронка из композитного материала
+              </div>
+              <div class="service__price">30.00 руб.</div>
+            </div>
+            <div class="service">
+              <div class="service__name">Металлокерамическая коронка</div>
+              <div class="service__price">от 320.00 руб.</div>
+            </div>
+            <div class="service">
+              <div class="service__name">
+                Металлокерамическая коронка на имплантате (без стоимости импланта и аттачмента)
+              </div>
+              <div class="service__price">от 360.00 руб.</div>
+            </div>
+            <div class="service">
+              <div class="service__name">Коронка из диоксида циркония</div>
+              <div class="service__price">от 700.00 руб.</div>
+            </div>
+            <div class="service">
+              <div class="service__name">
+                Коронка из прессованной керамики
+              </div>
+              <div class="service__price">от 700.00 руб.</div>
+            </div>
+            <div class="service">
+              <div class="service__name">
+                Съемный протез из нейлона или ацетала
+              </div>
+              <div class="service__price">от 1200.00 руб.</div>
+            </div>
+            <div class="service">
+              <div class="service__name">Бюгельный протез с кламмерами</div>
+              <div class="service__price">от 1200.00 руб.</div>
+            </div>
+            <div class="service">
+              <div class="service__name">Бюгельный протез с аттачментами</div>
+              <div class="service__price">от 1400.00 руб.</div>
+            </div>
+            <div class="service">
+              <div class="service__name">
+                Полный съемный пластиночный протез
+              </div>
+              <div class="service__price">от 650.00 руб.</div>
+            </div>
+            <div class="service">
+              <div class="service__name">Частичный съемный пластиночный протез</div>
+              <div class="service__price">от 600.00 руб.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="call-to-action">
+        <div class="container">
+          <h2>Не знаете с чего начать?</h2>
+          <p>Запишитесь на прием к специалисту для первичной диагностики</p>
+          <a class="appointment-btn appointment-btn_mobile" href="tel:+375173023101">
+            Записаться на приём</a>
+          <a class="appointment-btn appointment-btn_desktop" href="#contacts">
+            Записаться на приём</a>
+        </div>
+      </section>
+      <section id="doctors" class="scroll-to-section doctors">
+        <div class="container">
+          <h2>Наши сотрудники</h2>
+          <div class="doctors__list">
+            <div class="doctors__card">
+              <div class="doctors__card__image"></div>
+              <div class="doctors__card__info">
+                <h5>Запрейко Наталья Валерьевна</h5>
+                <p>Стоматолог-терапевт</p>
+                <p><b>Стаж работы:</b> 29 лет</p>
+                <p><b>Категория:</b> Первая</p>
+              </div>
+            </div>
+            <div class="doctors__card">
+              <div class="doctors__card__image"></div>
+              <div class="doctors__card__info">
+                <h5>Запрейко Виктор Евгеньевич</h5>
+                <p>Стоматолог-ортопед</p>
+                <p><b>Стаж работы:</b> 28 лет</p>
+                <p><b>Категория:</b> Первая</p>
+              </div>
+            </div>
+            <div class="doctors__card">
+              <div class="doctors__card__image"></div>
+              <div class="doctors__card__info">
+                <h5>Запрейко Степан Викторович</h5>
+                <p>Стоматолог-хирург</p>
+                <p><b>Стаж работы:</b> 6 лет</p>
+                <p><b>Категория:</b> Первая</p>
+              </div>
+            </div>
+            <div class="doctors__card">
+              <div class="doctors__card__image"></div>
+              <div class="doctors__card__info">
+                <h5>Каледа Татьяна Владимировна</h5>
+                <p>Ассистент стоматолога</p>
+                <p><b>Стаж работы:</b> 30 лет</p>
+                <p><b>Категория:</b> Высшая</p>
+              </div>
+            </div>
+            <div class="doctors__card">
+              <div class="doctors__card__image"></div>
+              <div class="doctors__card__info">
+                <h5>Дубровская Юлия Сергеевна</h5>
+                <p>Ассистент стоматолога</p>
+                <p><b>Стаж работы:</b> 18 лет</p>
+                <p><b>Категория:</b> Высшая</p>
+              </div>
+            </div>
+            <div class="doctors__card">
+              <div class="doctors__card__image"></div>
+              <div class="doctors__card__info">
+                <h5>Раткевич Татьяна Николаевна</h5>
+                <p>Ассистент стоматолога</p>
+                <p><b>Стаж работы:</b> 29 лет</p>
+                <p><b>Категория:</b> Высшая</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="scroll-to-section contacts">
+        <div id="contacts"></div>
+        <div id="map" class="map"></div>
+        <div class="contacts__info">
+          <h3>Стоматологическая клиника <span>“Навидент”</span></h3>
+          <ul>
+            <li>
+              <img src="<%=require('./assets/icons/location.svg')%>" />
+              <div>
+                <p>г. Минск, Притыцкого, 97</p>
+                <span>(вход со стороны двора)</span>
+              </div>
+            </li>
+            <li>
+              <img src="<%=require('./assets/icons/clock.svg')%>" />
+              <div>
+                <p>Работаем c 8:00 до 20:00 по будням</p>
+                <!-- <p>с 9:00 до 15:00 в субботу</p> -->
+              </div>
+            </li>
+            <li>
+              <img src="<%=require('./assets/icons/phone.svg')%>" />
+              <a href="tel:+375173023101">+375 17 - 302 - 31 - 01</a>
+            </li>
+          </ul>
+        </div>
+        <img class="contacts__image" src="<%=require('./assets/images/05.png')%>" />
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">© 2020 Стоматология Навидент</div>
+  </footer>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js"></script>
+</body>
+
 </html>
